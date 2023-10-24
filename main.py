@@ -5,23 +5,23 @@ def main():
         print("1. To encode")
         print("2. To decode")
         print("3. To exit")
-        choice = input("Enter your choice (1 or 2 or 3): ")
+        choice = input("Please enter an option: ")
         if choice == "1":
-            password = input("Enter an 8-digit password: ")
-            print("Encoded password is", encode(password))
+            password = input("Please enter your password to encode: ")
+            print("Your password has been encoded and stored!")
         elif choice == "2":
-            value = input("Enter an already encoded 8-digit password: ")
-            print("Decoded password is", decode(password))
+            value = password
+            print(f"The encoded password is {final_res} and the original password is {password}.")
         elif choice == "3":
             break
         else:
-            print("Not availible option")
+            print("Not an option")
         print()
 
 def encode(password):
     final_res = ''
     for num in password:
-        new_num = str((int(num) + 3) % 10)
+        new_num = str((int(num) + 2) % 10)
         final_res += new_num
     return final_res
 
