@@ -24,5 +24,10 @@ def encode(password):
         new_num = str((int(num) + 2) % 10)
         final_res += new_num
     return final_res
-
+def decoder(encoded_password): #  from Sienna Perez
+    decoded_password = ''
+    for digit in encoded_password:
+        old_number = str((int(digit) - 3) % 10)
+        decoded_password += old_number
+    return decoded_password
 main()
